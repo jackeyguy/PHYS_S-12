@@ -6,13 +6,14 @@ body {
     background-color: #a1d5ff;
   }
 
-p {font-size: 16px;}
+p {font-size: 16px;
+color: #000000}
 
 a:link{
-  color: #D8DBE2;
+  color: #ffffff;
 }
 a:visited{
-  color: #D8DBE2;
+  color: #ffffff;
 }
 
 a.logo:hover{
@@ -58,6 +59,7 @@ a.logo:hover{
   margin-top: 15px;
   font-size: 3rem;
   text-align: center;
+  color: #000000;
 }
 
 .top-row{
