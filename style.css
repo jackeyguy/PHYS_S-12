@@ -1,12 +1,12 @@
 body {
-    font: 20px Raleway, sans-serif;
+    font: 20px Comic Sans MS;
     line-height: 2;
     color: #D8DBE2;
     font-weight: 500;
     background-color: #a1d5ff;
   }
 
-p {font-size: 16px;
+p {font-size: 22px;
 color: #000000}
 
 a:link{
@@ -87,7 +87,7 @@ a.logo:hover{
 
 .img-responsive{
 
-  border: 10px solid #58A4B0;
+  border: 10px solid #20447d;
   border-radius: 4px;
 
 }
@@ -111,8 +111,9 @@ a.logo:hover{
 
 }
 
-.carousel-item{
-
-  text-align: center;
-
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
