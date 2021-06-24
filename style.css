@@ -7,7 +7,7 @@ body {
   }
 
 p {font-size: 22px;
-color: #000000}
+color: #ffffff}
 
 a:link{
   color: #ffffff;
@@ -59,7 +59,7 @@ a.logo:hover{
   margin-top: 15px;
   font-size: 3rem;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
 }
 
 .top-row{
