@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jackey's PHYS-S-12 Documentation </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+  <link href="../style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <nav class ="navbar container-fluid sticky-top">
+    <h2 class = "element"> <a href="../index.html" class="logo">Jackey Zheng's DigFab Doc</a></h2> 
+    <div class="flex nav">
+
+    </div>
+  </nav>
+
+<div class="container-fluid">
+  <h3 class="header">Class 07: Electronic Input Devices  </h3> <br>
+
+  <img src="./inputCover.png" alt = "com" class = "center" width = "50%" margin-left = "auto" margin-right = "auto"/> 
+
+<p>For this class's assignment, I used the hall sensor to sense the magnetic field from a magnet. I just followed the same general set up that was shown in website and at first it didn't seem to be sensing anything, then I just flipped the sensor then it started working. There seemed to be a midpoint where if it sensed nothing it would hover around 1800ish, if you hold it closer on one side it approaches 0 while if you flip it to the other side of the magnet, you can see that it approaches about 4800. Pretty cool stuff. Attached is a chart of somem values and my general set up. I couldn't really find cardboard to stack together, so I just used paper and kept folding it till I got my desired thickness. I used the calipers to measure the thickness. I also found the code to find the values outputted from Andrew's(former student) website.  </p>
+<iframe src=https://create.arduino.cc/editor/jackeyguy/b8c23b91-43f7-44c2-9b94-01268243345f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+<img src="./cali.jpg" alt = "calipers" class = "img-responsive" width = "40%"/> 
+<img src="./hall.jpg" alt = "hall" class = "img-responsive" width = "40%"/> 
+<img src="./hallSet.jpg" alt = "setup" class = "img-responsive" width = "40%"/> 
+<img src="./coms.jpg" alt = "hall" class = "img-responsive" width = "40%"/> 
+
+<p>Here's some charts </p>
+<img src="./chartHall.png" alt = "chart" class = "img-responsive" width = "100%"/> 
+
+
+<p>For my own sensor, I just based mine off of the Robert Hart website for the Arduino Capacitrive Sensing Library, where there was the whole touch thing. I basic copied the set up and used the sample code and then played around with it.</p>
+
+<img src="./copper.jpg" alt = "touch" class = "img-responsive" width = "50%"/> 
+
+<p> I thought of what to do with it in the one hour I have left before class and I just went with something simple, I just tried to see how the output value would change in relationship with the weight of an object. I went around my room looking for small objects and weighted them with my scale then placed them on the copper plate as shown above. The value for the most part would change but it didn't seem to have a super strong relationship and it seemed like it also mattered how spread of not spread it was, in other words, its concentration. Yet again, this may not have to really do with force or weight all that much because I think it is just by it being a ground so I guess its the most effective ground, but more force does seem to work better. Once again, if it is too spread out it doesn't give as high of an output value.</p>
+
+<iframe src=https://create.arduino.cc/editor/jackeyguy/dba67ea6-3d54-4381-9945-7f232cedc906/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+<img src="./chartCop.png" alt = "chart" class = "img-responsive" width = "100%"/> 
+
+
+
+
+
+</body>
+</html>
