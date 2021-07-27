@@ -21,35 +21,73 @@
   </nav>
 
 <div class="container-fluid">
-  <h3 class="header">Class 07: Electronic Input Devices  </h3> <br>
+  <h3 class="header">Class 09: Networking/IoT </h3> <br>
 
-  <img src="./inputCover.png" alt = "com" class = "center" width = "50%" margin-left = "auto" margin-right = "auto"/> 
+  <img src="./fire.png" alt = "fire" class = "center" width = "50%" margin-left = "auto" margin-right = "auto"/> 
 
-<p>For this class's assignment, I used the hall sensor to sense the magnetic field from a magnet. I just followed the same general set up that was shown in website and at first it didn't seem to be sensing anything, then I just flipped the sensor then it started working. There seemed to be a midpoint where if it sensed nothing it would hover around 1800ish, if you hold it closer on one side it approaches 0 while if you flip it to the other side of the magnet, you can see that it approaches about 4800. Pretty cool stuff. Attached is a chart of somem values and my general set up. I couldn't really find cardboard to stack together, so I just used paper and kept folding it till I got my desired thickness. I used the calipers to measure the thickness. I also found the code to find the values outputted from Andrew's(former student) website.  </p>
-<iframe src=https://create.arduino.cc/editor/jackeyguy/b8c23b91-43f7-44c2-9b94-01268243345f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHYSCI 70: Introduction to Digital Fabrication</title>
+</head>
 
-<img src="./cali.jpg" alt = "calipers" class = "img-responsive" width = "40%"/> 
-<img src="./hall.jpg" alt = "hall" class = "img-responsive" width = "40%"/> 
-<img src="./hallSet.jpg" alt = "setup" class = "img-responsive" width = "40%"/> 
-<img src="./coms.jpg" alt = "hall" class = "img-responsive" width = "40%"/> 
+<body>
+  <button id="turn-on" name="turnon">Turn On </button>
+  <button id="turn-off" name="turnoff">Turn Off </button>
 
-<p>Here's some charts </p>
-<img src="./chartHall.png" alt = "chart" class = "img-responsive" width = "100%"/> 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC98HRd6ebVTQcUF1qgCeffztb4Xeho5i4",
+    authDomain: "esp32-led-9fbe1.firebaseapp.com",
+    databaseURL: "https://esp32-led-9fbe1-default-rtdb.firebaseio.com",
+    projectId: "esp32-led-9fbe1",
+    storageBucket: "esp32-led-9fbe1.appspot.com",
+    messagingSenderId: "865558029542",
+    appId: "1:865558029542:web:99fd627044336d01a50727"
+  };
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // Get a database reference to our blog
+  var ref = firebase.database().ref("/");
+
+  // make the buttons call the function below 
+  document.getElementById('turn-on').addEventListener('click', turnOn, false);
+  document.getElementById('turn-off').addEventListener('click', turnOff, false);
+
+  function turnOn(){
+    console.log("turning on");
+    ref.update({
+      "LED_STATUS": "ON"
+    });
+  }
+
+  function turnOff(){
+    console.log("turning off");
+    ref.update({
+      "LED_STATUS": "OFF"
+    });
+  } 
+    </script>
+
+ <p>So if my board is cconnected to power, you would be able to change my LED from on and off but it most likely won't be when you are reading this. I basically first followed the LAN server that was pretty simple so I moved on to the remote server or the Firebase. This wasn't too bad when following the tutorial but I just found it so cool that it actually works. I didn't really have too much time to play around with this but I can definately think of some pretty nice and creative ways to use this in my final project in combination with the hacked smart Rubik's cube. </p>
+
+<video width="700" controls>
+  <source src="./demo.mov" type="video/mp4">
+</video>
 
 
-<p>For my own sensor, I just based mine off of the Robert Hart website for the Arduino Capacitrive Sensing Library, where there was the whole touch thing. I basic copied the set up and used the sample code and then played around with it.</p>
-
-<img src="./copper.jpg" alt = "touch" class = "img-responsive" width = "50%"/> 
-
-<p> I thought of what to do with it in the one hour I have left before class and I just went with something simple, I just tried to see how the output value would change in relationship with the weight of an object. I went around my room looking for small objects and weighted them with my scale then placed them on the copper plate as shown above. The value for the most part would change but it didn't seem to have a super strong relationship and it seemed like it also mattered how spread of not spread it was, in other words, its concentration. Yet again, this may not have to really do with force or weight all that much because I think it is just by it being a ground so I guess its the most effective ground, but more force does seem to work better. Once again, if it is too spread out it doesn't give as high of an output value.</p>
-
-<iframe src=https://create.arduino.cc/editor/jackeyguy/dba67ea6-3d54-4381-9945-7f232cedc906/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-
-<img src="./chartCop.png" alt = "chart" class = "img-responsive" width = "100%"/> 
-
-
-
-
-
+</body>
 </body>
 </html>
