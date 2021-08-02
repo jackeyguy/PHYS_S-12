@@ -23,11 +23,46 @@
   <h3 class="header">Final Project </h3> <br> 
 <img src="./selfsolve.gif" alt = "bluetooth" class = "img-responsive" width = "40%" />
 <img src="./bluetooth.jpg" alt = "selfsolving" class = "img-responsive" width = "40%" allign = "right"/>
-<p>So for my final project proposal, I hope to somehow incorporate the RUbik's cube to my project. A possible idea I have is to have a self-solving Rubik's cube or a bluetooth Rubik's cube. I believe both of these exists but it may be interesting for me to try to build them myself. Another idea I have is a robot that would go and fetch a specific type of Rubik's cube from an input from an app. All seem kind of doable but it would require me to learn a lot of new things. </p>
+<p>So for my final project proposal, I hope to somehow incorporate the RUbik's cube to my project. A possible idea I have is to have a self-solving Rubik's cube or a bluetooth Rubik's cube. I believe both of these exists but it may be interesting for me to try to build them myself. 
+
+Another idea I have is a robot that would go and fetch a specific type of Rubik's cube from an input from an app. All seem kind of doable but it would require me to learn a lot of new things. </p>
+
+<p>8/1/21, ok time to put everything together. So I've decided with my skill level in design and electronics, I am not built for this level of work but perhaps another time I can build up to that level, but for now here's the plan. I found a few videos while looking up how to make my own self-solving Rubik's cube. I didn't find a really good way that wouldn't takes months of design and preparation but what I did find was how to "hack" a smart cube(That already exists for sale) with a board that we convinently had. Nice, it seems doable.</p>
+
+ <iframe width="640" height="360"
+src="https://youtube.com/embed/1pIV4bjYAK4" margin= 0 auto;>
+</iframe>
+<p> In the video, the person explains how he just intercepted the bluetooth signal from the smart cube and then just translated its outputs. He then programmed it so that when the cube reached its solved state, the program would release a magsafe and release a balloon. So I decided to modify that part a little and instead have the Rubik's cube act as somewhat a key for a doorlock.</p>
+
+<p>I went straight to Amazon to buy the cube(I've always wanted a smart cube anyways) and got one for about $40 and got that a few days later</p>
+<img src="./amazon.png" alt = "amaozn" class = "img-responsive" width = "50%"/> 
+
+
+<p>I then proceeded to snoop around YouTube for some "lock" functions that worked with arduino and found one that used some kind of card scanner to unlock the lock. I didn't really need that scanner part but what caught my eyes was that lock mechanism they used. It was a pretty simple mechanism where a servos motor would just rotate moving the lock. Only problem was it needed to be 3D printed. So I went around looking for any friends or nearby services that would offer 3D printing services and so I found some so I should get it in a day or two.</p> 
+ <iframe width="640" height="360"
+src="https://youtube.com/embed/_9unR083OPY" margin= 0 auto;>
+</iframe>
 
 
 
-  
+
+<p>So I got my whole set up ready(except for the 3D printed stuff), so let's try to get the cube linked to the board. The first thing that I needed to find was the MAC address for the cube. This took some guess and checking.</p>
+
+<p>Now I first tried to connect just directly but it didn't seem to appear on my bluetooth devices nearby so I tried to connect it to a website called cstimer.net, which is a very popular timing website among speedcubers. And there was the cube that just magically popped up.</p>
+<img src="./csA.png" alt = "a" class = "img-responsive" width = "30%"/> 
+<img src="./csB.png" alt = "b" class = "img-responsive" width = "30%"/> 
+
+<p>Then I went back to my list of devices and boom it was there. There I was able to find the MAC address and put it in the code.</p>
+<img src="./address.png" alt = "address" class = "img-responsive" width = "30%"/> 
+<p>Next issue was that I was having trouble having the code upload to my board. There was very frustrating and I just couldn't figure it out. I ended up giving in and just changed my board to the board that the person had in his video and it worked! Not sure why but it did and it finally uploaded. Also it seems that the MAC address needs to be put in with colons in between instead of dashes but that was an easy fix. </p>
+
+<p> And just like that my code is running to tell me what move I just did on the serial monitor, pretty neat.</p>
+
+  <iframe src=https://create.arduino.cc/editor/jackeyguy/65dafe42-ba35-418c-a2fa-8a16abfd0b36/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+  <iframe src="https://gmail1825678.autodesk360.com/shares/public/SH919a0QTf3c32634dcfca19148dce388e4f?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+  <iframe src="https://gmail1825678.autodesk360.com/shares/public/SH919a0QTf3c32634dcf1d85f4be2ca501ea?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+
 </div>
 
 </body>

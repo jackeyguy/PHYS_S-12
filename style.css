@@ -4,10 +4,12 @@ body {
     color: #D8DBE2;
     font-weight: 500;
     background-image: linear-gradient(to bottom, blue , purple);;
+   margin-right: 30px; margin-left: 30px;
   }
 
 p {font-size: 22px;
-color: #ffffff}
+color: #ffffff;margin-left: 200px; margin-right: 200px;
+}
 
 a:link{
   color: #ffffff;
@@ -20,7 +22,9 @@ a.logo:hover{
   text-decoration: none;
 }
 
-.margin {margin-bottom: 10px;}
+
+.margin {margin-bottom: 10px;
+}
 
 .thumb{
   margin-bottom: 15px;
