@@ -27,7 +27,7 @@
 
 Another idea I have is a robot that would go and fetch a specific type of Rubik's cube from an input from an app. All seem kind of doable but it would require me to learn a lot of new things. </p>
 
-<p>8/1/21, ok time to put everything together. So I've decided with my skill level in design and electronics, I am not built for this level of work but perhaps another time I can build up to that level, but for now here's the plan. I found a few videos while looking up how to make my own self-solving Rubik's cube. I didn't find a really good way that wouldn't takes months of design and preparation but what I did find was how to "hack" a smart cube(That already exists for sale) with a board that we convinently had. Nice, it seems doable.</p>
+<p><b>8/1/21</b>, ok time to put everything together. So I've decided with my skill level in design and electronics, I am not built for this level of work but perhaps another time I can build up to that level, but for now here's the plan. I found a few videos while looking up how to make my own self-solving Rubik's cube. I didn't find a really good way that wouldn't takes months of design and preparation but what I did find was how to "hack" a smart cube(That already exists for sale) with a board that we convinently had. Nice, it seems doable.</p>
 
  <iframe width="640" height="360"
 src="https://youtube.com/embed/1pIV4bjYAK4" margin= 0 auto;>
@@ -57,6 +57,18 @@ src="https://youtube.com/embed/_9unR083OPY" margin= 0 auto;>
 <p>Next issue was that I was having trouble having the code upload to my board. There was very frustrating and I just couldn't figure it out. I ended up giving in and just changed my board to the board that the person had in his video and it worked! Not sure why but it did and it finally uploaded. Also it seems that the MAC address needs to be put in with colons in between instead of dashes but that was an easy fix. </p>
 
 <p> And just like that my code is running to tell me what move I just did on the serial monitor, pretty neat.</p>
+
+<video width="700" controls>
+  <source src="./monitor.mov" type="video/mp4">
+</video>
+
+<p> <b>8/3/21</b>, Next I wanted to change the output of the program when the board detects that the cube is in the solved state. I basically had to learn how to connect the servo motor to my esp32 which is a bit different from the Metro board.</p>
+
+<p> I followed a pretty nice <a href="https://dronebotworkshop.com/esp32-servo/">tutorial</a> online but I ran into some issues. Firstly, I tried changing my board back to the Adafruit ESP32 Feather and uploading the code and it worked? So I guess arduino was just having a bad day. The main issues I was having with uploading the motor code was I was not good at coding so I ended up putting pieces of code where they shouldn't have been and declaring things inside of methods instead of doing it outside so it would be seen in the whole program. But after some trial and error, I was able to get it running so I did a pretty basic set up for now making the motor rotate to the 90 degrees and waiting a second to then return to the original position and this worked very well. So now it's time to get the whole thing built together. Also note in the video that the built in LED lights up when the cube is connected which didn't happen before when the board was set to the Node32s and you can hear the motor move when I solved the cube. </p>
+
+<video width="700" controls>
+  <source src="./motor.mov" type="video/mp4">
+</video>
 
   <iframe src=https://create.arduino.cc/editor/jackeyguy/65dafe42-ba35-418c-a2fa-8a16abfd0b36/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 

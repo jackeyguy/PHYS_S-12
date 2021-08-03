@@ -13,9 +13,11 @@ color: #ffffff;margin-left: 200px; margin-right: 200px;
 
 a:link{
   color: #ffffff;
+  text-decoration: underline;
 }
 a:visited{
   color: #ffffff;
+  text-decoration: underline;
 }
 
 a.logo:hover{
