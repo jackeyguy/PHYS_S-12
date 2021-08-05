@@ -23,9 +23,13 @@
   <h3 class="header">Final Project </h3> <br> 
 <img src="./selfsolve.gif" alt = "bluetooth" class = "img-responsive" width = "40%" />
 <img src="./bluetooth.jpg" alt = "selfsolving" class = "img-responsive" width = "40%" allign = "right"/>
-<p>So for my final project proposal, I hope to somehow incorporate the RUbik's cube to my project. A possible idea I have is to have a self-solving Rubik's cube or a bluetooth Rubik's cube. I believe both of these exists but it may be interesting for me to try to build them myself. 
+<p>So for my final project proposal, I hope to somehow incorporate the Rubik's cube to my project. A possible idea I have is to have a self-solving Rubik's cube or a bluetooth Rubik's cube. I believe both of these exists but it may be interesting for me to try to build them myself. 
 
 Another idea I have is a robot that would go and fetch a specific type of Rubik's cube from an input from an app. All seem kind of doable but it would require me to learn a lot of new things. </p>
+
+ <iframe width="1080" height="720"
+src="https://youtube.com/embed/nx8OsXt-hBg" margin= 0 auto;>
+</iframe>
 
 <p><b>8/1/21</b>, ok time to put everything together. So I've decided with my skill level in design and electronics, I am not built for this level of work but perhaps another time I can build up to that level, but for now here's the plan. I found a few videos while looking up how to make my own self-solving Rubik's cube. I didn't find a really good way that wouldn't takes months of design and preparation but what I did find was how to "hack" a smart cube(That already exists for sale) with a board that we convinently had. Nice, it seems doable.</p>
 
@@ -70,10 +74,59 @@ src="https://youtube.com/embed/_9unR083OPY" margin= 0 auto;>
   <source src="./motor.mov" type="video/mp4">
 </video>
 
-  <iframe src=https://create.arduino.cc/editor/jackeyguy/65dafe42-ba35-418c-a2fa-8a16abfd0b36/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+<p>So after a few days, I have received my 3D printed parts. I kinda struggled to get these last minute but I got two sets, one from a friend and one from my library so that was pretty nice. I ended up using the one from the library just becasue it seemed to have given me a cleaner print.</p>
+
+<img src="./parts.jpg" alt = "parts" class = "center" width = "40%"/> 
+
+
+<p> When assemebling it, I first tried to see what the unlocked position would be so I could kind of put the little wing thing on how I want it because that will end up being my default position, I can then adjust it however I want it later. However, I would first need to glue on some kind of stick or rod to make the motor actually push the little lock into its lock and unlock positions.</p>
+
+<p> Glueing it seemed to be quiet an issue with me for the wing part of the motor was kinda hard to get a good grip with the glue. I first tried one wooden stick and this proved to be very weak and break only after a few tries. Next, I tried putting two wooden sticks together and seeing if that would help, and it did help for the sphere handle but still not for the plastic wing. Finally, I put another wooden stick on the other side of the wing, making the wing kinda of sandwiched in between. And it seems to be working so yay!</p>
+<img src="./wood1.jpg" alt = "1" class = "img-responsive" width = "30%"/> 
+<img src="./wood2.jpg" alt = "2" class = "img-responsive" width = "30%"/> 
+<img src="./wood3.jpeg" alt = "3" class = "img-responsive" width = "30%"/> 
+
+
+<p> With the lock assembled with the motor, I can move on to making the program work a bit more with my needs. I needed to make sure that the motor would not over or under shoot. This was basically just me switching and testing values for the servo write where you would write how many degrees  r the position of the motor and after I while I finally got it.</p>
+
+<video width="700" controls>
+  <source src="./preDemo.mov" type="video/mp4">
+</video>
+
+
+<p> Now all is left to do is to mount it on a wall or just tape it because I doubt I want to keep this on my door. The outlet is a bit far so I'm just going to use a battery pack. <b>Update: It didn't work because the door frame was not flat enough and the glue broke again :(</b></p>
+
+<img src="./door.jpg" alt = "door" class = "center" width = "40%"/> 
+
+<p> After glueing and drying again, I decided that the door was a bit too risky with the time I had left and also it was just a huge mess to put it on the door because I didn't actually want to screw it in so I tried taping it but I'm just terrible at doing that too. So I then just switched and made my own mini door out of cardboard because I could control the condition of it. I used an exacto knife and boom a mini door. I made sure to allign the components correctly so that it would actually works anddddd...</p>
+<video width="700" controls>
+  <source src="./fail.mov" type="video/mp4">
+</video>
+
+<p>I glued it again and gave it some time to dry and recorded again...</p>
+<video width="700" controls>
+  <source src="./success.mov" type="video/mp4">
+</video>
+<p><b>Thoughts for a v2:</b> At last it has worked but obviously this is not the best this project can be. I hope that if I have time I can possibly make it work out for the curved door frame of my doors. Another major thing is to fix the way I attach the lock with the servo mount. In the video, the person actually screws it to the metal rods but I simply didn't have the same materials in such short notice so it is my fault for giving myself so little time but I'm really glad that I did this and took this class because it really has opened my eyes to a bunch of different ideas with this smart Rubik's cube. Hopefully I can do something even cooler next time with this smart Rubik's cube, maybe one day actually make one for myself. Until then, thanks for reading, all files and code will be below.</p>
+
+
+
+ <iframe src=https://create.arduino.cc/editor/jackeyguy/c33fedb4-da4d-4c3a-869f-e15d76fb668f/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
   <iframe src="https://gmail1825678.autodesk360.com/shares/public/SH919a0QTf3c32634dcfca19148dce388e4f?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
   <iframe src="https://gmail1825678.autodesk360.com/shares/public/SH919a0QTf3c32634dcf1d85f4be2ca501ea?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+<div>
+  <a href="./Sliding Lock.stl"> Sliding Lock STL File</a>
+  <div>
+<a href="./Servo Bracket.stl"> Servos Bracket STL Files</a>
+
+
+  <p>Links:</p>
+    <p><a href="https://dronebotworkshop.com/esp32-servo/">Servo motor with ESP32</a></p>
+    <p><a href="https://www.the-diy-life.com/arduino-based-rfid-door-lock-make-your-own/">Lock Guide</a></p>
+      <p><a href="https://www.youtube.com/watch?v=1pIV4bjYAK4">Hacking Smart Cube</a></p>
+
+
 
 </div>
 
