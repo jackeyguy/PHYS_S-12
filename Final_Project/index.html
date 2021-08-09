@@ -63,7 +63,7 @@ src="https://youtube.com/embed/_9unR083OPY" margin= 0 auto;>
 <p> And just like that my code is running to tell me what move I just did on the serial monitor, pretty neat.</p>
 
 <video width="700" controls>
-  <source src="./monitor.mov" type="video/mp4">
+  <source src="./monitor.mp4" type="video/mp4">
 </video>
 
 <p> <b>8/3/21</b>, Next I wanted to change the output of the program when the board detects that the cube is in the solved state. I basically had to learn how to connect the servo motor to my esp32 which is a bit different from the Metro board.</p>
@@ -71,7 +71,7 @@ src="https://youtube.com/embed/_9unR083OPY" margin= 0 auto;>
 <p> I followed a pretty nice <a href="https://dronebotworkshop.com/esp32-servo/">tutorial</a> online but I ran into some issues. Firstly, I tried changing my board back to the Adafruit ESP32 Feather and uploading the code and it worked? So I guess arduino was just having a bad day. The main issues I was having with uploading the motor code was I was not good at coding so I ended up putting pieces of code where they shouldn't have been and declaring things inside of methods instead of doing it outside so it would be seen in the whole program. But after some trial and error, I was able to get it running so I did a pretty basic set up for now making the motor rotate to the 90 degrees and waiting a second to then return to the original position and this worked very well. So now it's time to get the whole thing built together. Also note in the video that the built in LED lights up when the cube is connected which didn't happen before when the board was set to the Node32s and you can hear the motor move when I solved the cube. </p>
 
 <video width="700" controls>
-  <source src="./motor.mov" type="video/mp4">
+  <source src="./motor.mp4" type="video/mp4">
 </video>
 
 <p>So after a few days, I have received my 3D printed parts. I kinda struggled to get these last minute but I got two sets, one from a friend and one from my library so that was pretty nice. I ended up using the one from the library just becasue it seemed to have given me a cleaner print.</p>
@@ -90,7 +90,7 @@ src="https://youtube.com/embed/_9unR083OPY" margin= 0 auto;>
 <p> With the lock assembled with the motor, I can move on to making the program work a bit more with my needs. I needed to make sure that the motor would not over or under shoot. This was basically just me switching and testing values for the servo write where you would write how many degrees  r the position of the motor and after I while I finally got it.</p>
 
 <video width="700" controls>
-  <source src="./preDemo.mov" type="video/mp4">
+  <source src="./preDemo.mp4" type="video/mp4">
 </video>
 
 
@@ -100,12 +100,12 @@ src="https://youtube.com/embed/_9unR083OPY" margin= 0 auto;>
 
 <p> After glueing and drying again, I decided that the door was a bit too risky with the time I had left and also it was just a huge mess to put it on the door because I didn't actually want to screw it in so I tried taping it but I'm just terrible at doing that too. So I then just switched and made my own mini door out of cardboard because I could control the condition of it. I used an exacto knife and boom a mini door. I made sure to allign the components correctly so that it would actually works anddddd...</p>
 <video width="700" controls>
-  <source src="./fail.mov" type="video/mp4">
+  <source src="./fail.mp4" type="video/mp4">
 </video>
 
 <p>I glued it again and gave it some time to dry and recorded again...</p>
 <video width="700" controls>
-  <source src="./success.mov" type="video/mp4">
+  <source src="./success.mp4" type="video/mp4">
 </video>
 <p><b>Thoughts for a v2:</b> At last it has worked but obviously this is not the best this project can be. I hope that if I have time I can possibly make it work out for the curved door frame of my doors. Another major thing is to fix the way I attach the lock with the servo mount. In the video, the person actually screws it to the metal rods but I simply didn't have the same materials in such short notice so it is my fault for giving myself so little time but I'm really glad that I did this and took this class because it really has opened my eyes to a bunch of different ideas with this smart Rubik's cube. Hopefully I can do something even cooler next time with this smart Rubik's cube, maybe one day actually make one for myself. Until then, thanks for reading, all files and code will be below.</p>
 
